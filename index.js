@@ -49,9 +49,13 @@ module.exports = {
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: 'tsconfig.json',
+        project: [
+          'tsconfig.eslint.json',
+          'tsconfig.json',
+        ],
       },
       rules,
     },
   ],
+  ignorePatterns: ['node_modules', 'dist', 'build', 'out'],
 };

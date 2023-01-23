@@ -17,13 +17,27 @@ const rules = {
   'arrow-body-style': 'off',
   'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
   'max-len': 'off',
+  'react/jsx-props-no-spreading': 'off',
+  'react/function-component-definition': ['error', {
+    'namedComponents': 'arrow-function',
+    'unnamedComponents': 'arrow-function',
+  }],
+  'react/no-unescaped-entities': ['error', {
+    forbid: [{
+      char: '>',
+      alternatives: ['&gt;'],
+    }, {
+      char: '}',
+      alternatives: ['&#125;'],
+    }],
+  }],
 };
 
 module.exports = {
-  env: {},
   extends: [
     'eslint:recommended',
     'airbnb',
+    'plugin:react/jsx-runtime',
   ],
   rules,
   overrides: [

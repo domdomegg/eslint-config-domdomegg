@@ -50,8 +50,8 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: [
-          'tsconfig.eslint.json',
-          'tsconfig.json',
+          '?(tsconfig.eslint.json)',
+          '?(tsconfig.json)',
         ],
       },
       rules,

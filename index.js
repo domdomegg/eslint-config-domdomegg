@@ -31,6 +31,8 @@ const rules = {
       alternatives: ['&#125;'],
     }],
   }],
+  'react/jsx-one-expression-per-line': 'off',
+  'import/prefer-default-export': 'off',
 };
 
 module.exports = {

@@ -13,6 +13,7 @@ npm install --save-dev eslint eslint-config-domdomegg
 Enable it by adding a `.eslintrc.js` file with:
 
 ```js
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   extends: ['eslint-config-domdomegg'],
   rules: {
@@ -21,7 +22,7 @@ module.exports = {
 };
 ```
 
-Generally if an ESLint config exists, I put my personal styles first (so the project-specific 'extends' rules overwrite it).
+Generally if an ESLint config exists, I put my personal styles first in the 'extends' array (so the project-specific rules overwrite it).
 
 You can add a lint script to `package.json` that looks like:
 

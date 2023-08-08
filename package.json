@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "eslint tests --report-unused-disable-directives"
+    "test": "eslint ./tests --report-unused-disable-directives"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

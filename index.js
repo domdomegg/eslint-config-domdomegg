@@ -15,13 +15,19 @@ const rules = {
 
   // Personal preferences
   'arrow-body-style': 'off',
-  'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
   'max-len': 'off',
+  'react/jsx-one-expression-per-line': 'off',
+  'import/prefer-default-export': 'off',
   'react/jsx-props-no-spreading': 'off',
+  'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
   'react/function-component-definition': ['error', {
     'namedComponents': 'arrow-function',
     'unnamedComponents': 'arrow-function',
   }],
+
+  // Reduce entities that need escaping.
+  // Other errors will usually result in a TypeScript failure of some kind or be more obviously noticeable.
+  // These two are much easier to accidentally make while refactoring code, and are symbols that are less used.
   'react/no-unescaped-entities': ['error', {
     forbid: [{
       char: '>',
@@ -31,8 +37,13 @@ const rules = {
       alternatives: ['&#125;'],
     }],
   }],
-  'react/jsx-one-expression-per-line': 'off',
-  'import/prefer-default-export': 'off',
+
+  // Tune accessibility settings
+  'jsx-a11y/label-has-associated-control': ['error', {
+    // Allows either nesting input in label, or matching with id
+    // (default from airbnb is to only allow when both nested and matched by id)
+    assert: 'either',
+  }],
 };
 
 module.exports = {

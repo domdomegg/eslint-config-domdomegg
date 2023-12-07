@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-domdomegg",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Personal ESLint configuration (TypeScript + React compatible)",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",

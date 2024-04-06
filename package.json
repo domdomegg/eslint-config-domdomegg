@@ -6,7 +6,7 @@
   "author": "Adam Jones (domdomegg)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domdomegg/typescript-library-template.git"
+    "url": "https://github.com/domdomegg/eslint-config-domdomegg.git"
   },
   "scripts": {
     "lint": "eslint .",

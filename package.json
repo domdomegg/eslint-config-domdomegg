@@ -4,6 +4,9 @@
   "description": "Personal ESLint configuration (TypeScript + React compatible)",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/domdomegg/eslint-config-domdomegg.git"

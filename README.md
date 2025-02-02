@@ -29,7 +29,7 @@ You can add a lint script to `package.json` that looks like:
 ```json
 {
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint"
   }
 }
 ```

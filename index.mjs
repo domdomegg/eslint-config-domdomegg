@@ -80,7 +80,7 @@ export default tseslint.config(
 
 	xoConfig.map((c) => {
 		if (c.plugins?.['@typescript-eslint']) {
-			c.files = ['*.ts', '*.tsx', '*.mts', '*.cts'];
+			c.files = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
 			c.languageOptions ??= {};
 			c.languageOptions.parserOptions ??= {};
 			c.languageOptions.parserOptions.projectService = false;
@@ -95,8 +95,6 @@ export default tseslint.config(
 
 	// Custom rules
 	{
-		rules: {
-			...rules,
-		},
+		rules,
 	},
 );

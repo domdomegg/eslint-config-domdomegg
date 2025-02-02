@@ -13,8 +13,8 @@
     "url": "https://github.com/domdomegg/eslint-config-domdomegg.git"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "eslint ./tests --report-unused-disable-directives && tsc --noEmit"
+    "lint": "eslint --ignore-pattern 'tests/throwsError.*'",
+    "test": "eslint ./tests --report-unused-disable-directives --ignore-pattern 'tests/throwsError.*' && ! eslint ./tests/throwsError.js 1>/dev/null && ! eslint ./tests/throwsError.ts 1>/dev/null && tsc --noEmit"
   },
   "dependencies": {
     "@eslint/js": "^9.19.0",

@@ -96,10 +96,11 @@ export default tseslint.config(
 				'?(tsconfig.json)',
 			];
 
-			// Remove unwanted rules
-			// @ts-expect-error bad types
-			delete c.rules?.['@typescript-eslint/no-restricted-types']?.[1]?.types?.null;
+			// Remove unwanted rules - way too many false positives
+			delete c.rules?.['@typescript-eslint/no-restricted-types'];
 			delete c.rules?.['@typescript-eslint/naming-convention'];
+			delete c.rules?.['@typescript-eslint/consistent-type-assertions'];
+			delete c.rules?.['@typescript-eslint/prefer-nullish-coalescing'];
 		}
 
 		if (c.rules?.['@typescript-eslint/naming-convention']) {

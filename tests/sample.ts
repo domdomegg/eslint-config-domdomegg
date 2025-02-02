@@ -29,7 +29,15 @@ const shouldBeTemplate = x + 'thing' + x;
 // eslint-disable-next-line @stylistic/no-whitespace-before-property, @stylistic/no-multi-spaces, @stylistic/space-infix-ops
 const spacing = (1 +  2+3+4) .toString();
 
+const y = JSON.stringify({
+	camelCase: 123,
+	snake_case: 123,
+	PascalCase: 123,
+});
+
+// lowercase comment
+
 // Just to use things
-myFunc([correctTemplate, shouldBeTemplate, indentedWrong, spacing]);
+myFunc([correctTemplate, shouldBeTemplate, indentedWrong, spacing, y]);
 
 export default myFunc;

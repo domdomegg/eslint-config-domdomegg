@@ -30,6 +30,7 @@ const rules = {
 	}],
 	'@typescript-eslint/no-unused-vars': 'error',
 	'@typescript-eslint/array-type': ['error', {default: 'array'}],
+	'capitalized-comments': 'off',
 
 	// Reduce entities that need escaping
 	'react/no-unescaped-entities': ['error', {
@@ -88,8 +89,11 @@ export default tseslint.config(
 				'?(tsconfig.eslint.json)',
 				'?(tsconfig.json)',
 			];
+
+			// Remove unwanted rules
 			// @ts-expect-error bad types
 			delete c.rules?.['@typescript-eslint/no-restricted-types']?.[1]?.types?.null;
+			delete c.rules?.['@typescript-eslint/naming-convention'];
 		}
 
 		return c;

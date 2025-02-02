@@ -32,6 +32,10 @@ const rules = {
 	'@typescript-eslint/no-unused-vars': 'error',
 	'@typescript-eslint/array-type': ['error', {default: 'array'}],
 	'capitalized-comments': 'off',
+	complexity: 'off',
+	'no-warning-comments': 'off',
+	'max-params': 'off',
+	'no-negated-condition': 'off',
 
 	// Reduce entities that need escaping
 	'react/no-unescaped-entities': ['error', {

@@ -101,6 +101,10 @@ export default tseslint.config(
 			delete c.rules?.['@typescript-eslint/naming-convention'];
 		}
 
+		if (c.rules?.['@typescript-eslint/naming-convention']) {
+			delete c.rules?.['@typescript-eslint/naming-convention'];
+		}
+
 		return c;
 	}),
 

@@ -17,10 +17,8 @@ import domdomegg from 'eslint-config-domdomegg';
 
 /** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
-  domdomegg,
-  {
-    // optionally add custom rules here
-  }
+  ...domdomegg,
+  // optionally add custom rules here
 ];
 ```
 
@@ -31,7 +29,7 @@ You can add a lint script to `package.json` that looks like:
 ```json
 {
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
+    "lint": "eslint ."
   }
 }
 ```

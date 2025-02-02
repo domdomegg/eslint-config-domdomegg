@@ -51,6 +51,14 @@ const rules = {
 export default tseslint.config(
 	// Base config for all files
 	{
+		ignores: ['**/dist/'],
+	},
+	{
+		settings: {
+			react: {
+				version: 'detect',
+			},
+		},
 		plugins: {
 			react: reactPlugin,
 			'jsx-a11y': jsxA11y,
@@ -87,11 +95,6 @@ export default tseslint.config(
 
 	// Custom rules
 	{
-		settings: {
-			react: {
-				version: 'detect',
-			},
-		},
 		rules: {
 			...rules,
 		},

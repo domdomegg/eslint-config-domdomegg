@@ -4,8 +4,9 @@
   "description": "Personal ESLint configuration (TypeScript + React compatible)",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
+  "main": "index.mjs",
   "files": [
-    "index.js"
+    "index.mjs"
   ],
   "repository": {
     "type": "git",

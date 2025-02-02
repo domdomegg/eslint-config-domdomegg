@@ -36,6 +36,7 @@ const rules = {
 	'no-warning-comments': 'off',
 	'max-params': 'off',
 	'no-negated-condition': 'off',
+	'react/display-name': 'off',
 
 	// Reduce entities that need escaping
 	'react/no-unescaped-entities': ['error', {

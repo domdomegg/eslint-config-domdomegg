@@ -21,6 +21,7 @@ const rules = {
 	'arrow-body-style': 'off',
 	'@stylistic/arrow-parens': ['error', 'always'],
 	'max-len': 'off',
+	'@stylistic/max-len': 'off',
 	'react/jsx-one-expression-per-line': 'off',
 	'react/jsx-props-no-spreading': 'off',
 	'no-plusplus': ['error', {allowForLoopAfterthoughts: true}],

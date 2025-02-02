@@ -88,6 +88,8 @@ export default tseslint.config(
 				'?(tsconfig.eslint.json)',
 				'?(tsconfig.json)',
 			];
+			// @ts-expect-error bad types
+			delete c.rules?.['@typescript-eslint/no-restricted-types']?.[1]?.types?.null;
 		}
 
 		return c;

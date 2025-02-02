@@ -16,20 +16,18 @@
     "test": "eslint ./tests --report-unused-disable-directives"
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.6.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "@eslint/js": "^9.19.0",
+    "eslint-config-xo-typescript": "^7.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "typescript-eslint": "^8.22.0"
   },
   "peerDependencies": {
-    "eslint": "^8.55.0"
+    "eslint": "^9"
   },
   "devDependencies": {
-    "@tsconfig/node-lts-strictest": "^18.12.1"
+    "@tsconfig/node-lts": "^22.0.1",
+    "tsconfig-domdomegg": "^1.0.0"
   }
 }

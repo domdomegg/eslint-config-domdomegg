@@ -10,19 +10,21 @@ Install ESLint and this library with:
 npm install --save-dev eslint eslint-config-domdomegg
 ```
 
-Enable it by adding a `.eslintrc.js` file with:
+Enable it by adding a `eslint.config.mjs` file with:
 
 ```js
-/** @type {import('eslint').Linter.Config} */
-module.exports = {
-  extends: ['eslint-config-domdomegg'],
-  rules: {
+import domdomegg from 'eslint-config-domdomegg';
+
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+export default [
+  domdomegg,
+  {
     // optionally add custom rules here
-  },
-};
+  }
+];
 ```
 
-Generally if an ESLint config exists, I put my personal styles first in the 'extends' array (so the project-specific rules overwrite it).
+Generally if an ESLint config exists, I put my personal styles first in the array (so the project-specific rules overwrite it).
 
 You can add a lint script to `package.json` that looks like:
 

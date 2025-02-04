@@ -86,6 +86,27 @@ export default tseslint.config(
 	},
 
 	xoConfig.map((c) => {
+		// Remove unwanted rules - way too many false positives
+		const unwantedRules = [
+			'@typescript-eslint/no-restricted-types',
+			'@typescript-eslint/naming-convention',
+			'@typescript-eslint/consistent-type-assertions',
+			'@typescript-eslint/prefer-nullish-coalescing',
+			'@typescript-eslint/naming-convention',
+			'@typescript-eslint/no-unsafe-argument',
+			'@typescript-eslint/no-unsafe-assignment',
+			'@typescript-eslint/no-unsafe-call',
+			'@typescript-eslint/no-unsafe-declaration-merging',
+			'@typescript-eslint/no-unsafe-enum-comparison',
+			'@typescript-eslint/no-unsafe-function-type',
+			'@typescript-eslint/no-unsafe-member-access',
+			'@typescript-eslint/no-unsafe-return',
+			'@typescript-eslint/no-unsafe-type-assertion',
+		];
+		for (const rule of unwantedRules) {
+			delete c.rules?.[rule];
+		}
+
 		if (c.plugins?.['@typescript-eslint']) {
 			c.files = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
 			c.languageOptions ??= {};
@@ -95,16 +116,6 @@ export default tseslint.config(
 				'?(tsconfig.eslint.json)',
 				'?(tsconfig.json)',
 			];
-
-			// Remove unwanted rules - way too many false positives
-			delete c.rules?.['@typescript-eslint/no-restricted-types'];
-			delete c.rules?.['@typescript-eslint/naming-convention'];
-			delete c.rules?.['@typescript-eslint/consistent-type-assertions'];
-			delete c.rules?.['@typescript-eslint/prefer-nullish-coalescing'];
-		}
-
-		if (c.rules?.['@typescript-eslint/naming-convention']) {
-			delete c.rules?.['@typescript-eslint/naming-convention'];
 		}
 
 		return c;

@@ -116,6 +116,9 @@ export default tseslint.config(
 				'?(tsconfig.eslint.json)',
 				'?(tsconfig.json)',
 			];
+
+			// Remove the @typescript-eslint plugin to avoid redefinition
+			delete c.plugins['@typescript-eslint'];
 		}
 
 		return c;
